@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     position: absolute;
-    top: 105px;
     left: 0px;
     background: linear-gradient(135deg, #EE9AE5 0%, #5961F9 100%);
     color: #FFF;
@@ -11,6 +10,9 @@ export const Container = styled.div`
     text-align: left;
     padding: 12px;
     overflow: hidden;
+    opacity: 0;
+    top: 50px;
+    animation: showOnPageCard 0.5s linear forwards;
 
     small{
         font-size: 14px;
@@ -52,6 +54,17 @@ export const Container = styled.div`
             top: -56px;
             left: 42px;
             opacity: 0.3;
+        }
+    }
+
+    @keyframes showOnPageCard{
+        from{
+            opacity: 0;
+        }
+
+        to{
+            opacity: 1;
+            top: 105px;
         }
     }
 `
