@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import Bkg1 from '../assets/background1.png'
+import Bkg2 from '../assets/background2.png'
 
 const globalStyle = createGlobalStyle`
     *{
@@ -12,7 +14,10 @@ const globalStyle = createGlobalStyle`
     }
 
     body{
+        background-image: url(${Bkg1}), url(${Bkg2});
         background-color: #F8FDFF;
+        background-repeat: no-repeat;
+        background-position: top right;
         font-family: 'Poppins', sans-serif;
     }
 
